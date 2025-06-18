@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free online tools for calculations, PDF processing, image conversion, domain analysis, content creation and more. 100+ tools to boost your productivity.">
+    <meta name="keywords" content="online tools, calculators, PDF tools, image tools, domain tools, AI writing, content tools">
+    <meta name="author" content="AllWebTools">
+    <title>AllWebTools - 100+ Free Online Tools for Everyone</title>
+    <link rel="canonical" href="https://allwebtools.com" />
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="AllWebTools - 100+ Free Online Tools">
+    <meta property="og:description" content="Free online tools for calculations, PDF processing, image conversion, domain analysis and content creation.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://allwebtools.com">
+    <meta property="og:image" content="https://allwebtools.com/images/og-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #4a6bff;
+            --secondary-color: #00c9a7;
+            --accent-color: #ff6b6b;
+            --dark-color: #2c3e50;
+            --light-color: #f8f9fa;
+            --gray-color: #6c757d;
+            --border-color: #e9ecef;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #fff;
+            padding: 0;
+            margin: 0;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .logo-text span {
+            color: var(--secondary-color);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), #6a11cb);
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+        
+        .hero-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+        
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            border: none;
+            font-size: 1rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .search-btn {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .search-btn:hover {
+            background-color: #00a58e;
+        }
+        
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+        
+        /* Categories Section */
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--dark-color);
+            display: inline-block;
+            background-color: white;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background-color: var(--border-color);
+            z-index: 0;
+        }
+        
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .category-card {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .category-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+        }
+        
+        .category-header i {
+            font-size: 1.5rem;
+            margin-right: 0.75rem;
+        }
+        
+        .category-header h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .tools-list {
+            padding: 1rem;
+        }
+        
+        .tools-list ul {
+            list-style: none;
+        }
+        
+        .tools-list li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .tools-list a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--gray-color);
+            padding: 0.5rem 0;
+            transition: color 0.3s;
+        }
+        
+        .tools-list a:hover {
+            color: var(--primary-color);
+        }
+        
+        .tools-list i {
+            margin-right: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+        }
+        
+        /* Popular Tools Section */
+        .popular-tools {
+            margin-bottom: 3rem;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .tool-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .tool-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(74, 107, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+        
+        .tool-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+        
+        .tool-card p {
+            font-size: 0.8rem;
+            color: var(--gray-color);
+        }
+        
+        /* Ad Containers */
+        .ad-container {
+            background-color: var(--light-color);
+            padding: 1rem;
+            margin: 2rem 0;
+            text-align: center;
+            border-radius: 4px;
+            border: 1px dashed var(--border-color);
+            min-height: 90px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Features Section */
+        .features {
+            background-color: var(--light-color);
+            padding: 3rem 1rem;
+            margin: 3rem 0;
+        }
+        
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 1.5rem;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+        
+        .feature-card p {
+            color: var(--gray-color);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 3rem 1rem 1rem;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-column h3::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .footer-column a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column a:hover {
+            color: white;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            background-color: rgba(255,255,255,0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background-color 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-color);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            margin-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #adb5bd;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            nav ul {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .categories-grid {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+            
+            .tools-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+            
+            .feature-card {
+                padding: 1rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo {
+                margin-bottom: 1rem;
+            }
+            
+            .hero {
+                padding: 3rem 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .footer-column h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="AllWebTools Logo">
+                <span class="logo-text">All<span>Web</span>Tools</span>
+            </a>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tools.html">All Tools</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1>100+ Free Online Tools to Boost Your Productivity</h1>
+            <p>All the tools you need in one place - free, fast and easy to use</p>
+            
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search for tools...">
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Top Ad Banner -->
+        <div class="ad-container">
+            <!-- Replace with your Google AdSense ad unit code -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"
+                crossorigin="anonymous"></script>
+            <!-- AllWebTools_Top_Banner -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+                data-ad-slot="YOUR_AD_SLOT_ID"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+        <!-- Popular Tools Section -->
+        <section class="popular-tools">
+            <div class="section-title">
+                <h2>Most Popular Tools</h2>
+            </div>
+            
+            <div class="tools-grid">
+                <!-- Calculator Tools -->
+                <a href="age-calculator.html" class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Age Calculator</h3>
+                    <p>Calculate age from birth date</p>
+                </a>
+                
+                <a href="percentage-calculator.html" class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3>Percentage Calculator</h3>
+                    <p>Calculate percentages easily</p>
+                </a>
+                
+                <a href="gpa-calculator.html" class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>GPA Calculator</h3>
+                    <p>Calculate your grade point average</p>
+                </a>
+                
+                <!-- PDF Tools -->
+                <a href="pdf-to-word.html" class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-file-word"></i>
+                    </div>
+                    <h3>PDF to Word</h3>
+                    <p>Convert PDF to editable Word</p>
+                </a>
+                
+                <a href="compress-pdf.html" class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>Compress PDF</h3>
+                    <p>Reduce PDF file size</p>
+                </a>
+                
+                <!-- Image Tools -->
+                <a href="compress-image.html" class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3>Compress Image</h3>
+                    <p>Reduce image file size</p>
+                </a>
+                
+                <a href="jpg-to-png.html" class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-file-image"></i>
+                    </div>
+                    <h3>JPG to PNG</h3>
+                    <p>Convert image formats</p>
+                </a>
+                
+                <!-- Content Tools -->
+                <a href="plagiarism-checker.html" class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Plagiarism Checker</h3>
+                    <p>Check for duplicate content</p>
+                </a>
+                
+                <a href="word-counter.html" class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-font"></i>
+                    </div>
+                    <h3>Word Counter</h3>
+                    <p>Count words and characters</p>
+                </a>
+                
+                <a href="ai-writer.html" class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>AI Writer</h3>
+                    <p>Generate content with AI</p>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Middle Ad Banner -->
+        <div class="ad-container">
+            <!-- Replace with your Google AdSense ad unit code -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"
+                crossorigin="anonymous"></script>
+            <!-- AllWebTools_Middle_Banner -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+                data-ad-slot="YOUR_AD_SLOT_ID"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+        
+        <!-- Categories Section -->
+        <section class="categories">
+            <div class="section-title">
+                <h2>Tools Categories</h2>
+            </div>
+            
+            <div class="categories-grid">
+                <!-- Calculators Category -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <i class="fas fa-calculator"></i>
+                        <h3>Calculators</h3>
+                    </div>
+                    <div class="tools-list">
+                        <ul>
+                            <li><a href="age-calculator.html"><i class="fas fa-angle-right"></i> Age Calculator</a></li>
+                            <li><a href="percentage-calculator.html"><i class="fas fa-angle-right"></i> Percentage Calculator</a></li>
+                            <li><a href="average-calculator.html"><i class="fas fa-angle-right"></i> Average Calculator</a></li>
+                            <li><a href="cpm-calculator.html"><i class="fas fa-angle-right"></i> CPM Calculator</a></li>
+                            <li><a href="loan-to-value-calculator.html"><i class="fas fa-angle-right"></i> Loan To Value Calculator</a></li>
+                            <li><a href="grade-calculator.html"><i class="fas fa-angle-right"></i> Grade Calculator</a></li>
+                            <li><a href="gpa-calculator.html"><i class="fas fa-angle-right"></i> GPA Calculator</a></li>
+                            <li><a href="calorie-calculator.html"><i class="fas fa-angle-right"></i> Calorie Calculator</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- PDF Tools Category -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <i class="fas fa-file-pdf"></i>
+                        <h3>PDF Tools</h3>
+                    </div>
+                    <div class="tools-list">
+                        <ul>
+                            <li><a href="unlock-pdf.html"><i class="fas fa-angle-right"></i> Unlock PDF</a></li>
+                            <li><a href="lock-pdf.html"><i class="fas fa-angle-right"></i> Lock PDF</a></li>
+                            <li><a href="watermark-pdf.html"><i class="fas fa-angle-right"></i> Watermark PDF</a></li>
+                            <li><a href="pdf-to-word.html"><i class="fas fa-angle-right"></i> PDF To Word</a></li>
+                            <li><a href="word-to-pdf.html"><i class="fas fa-angle-right"></i> Word To PDF</a></li>
+                            <li><a href="pdf-to-jpg.html"><i class="fas fa-angle-right"></i> PDF To JPG</a></li>
+                            <li><a href="jpg-to-pdf.html"><i class="fas fa-angle-right"></i> JPG To PDF</a></li>
+                            <li><a href="powerpoint-to-pdf.html"><i class="fas fa-angle-right"></i> PowerPoint To PDF</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Image Tools Category -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <i class="fas fa-image"></i>
+                        <h3>Image Tools</h3>
+                    </div>
+                    <div class="tools-list">
+                        <ul>
+                            <li><a href="convert-to-jpg.html"><i class="fas fa-angle-right"></i> Convert To JPG</a></li>
+                            <li><a href="png-to-jpg.html"><i class="fas fa-angle-right"></i> PNG To JPG</a></li>
+                            <li><a href="jpg-to-png.html"><i class="fas fa-angle-right"></i> JPG To PNG</a></li>
+                            <li><a href="compress-image-50kb.html"><i class="fas fa-angle-right"></i> Compress to 50KB</a></li>
+                            <li><a href="compress-image-20kb.html"><i class="fas fa-angle-right"></i> Compress to 20KB</a></li>
+                            <li><a href="reduce-image-size.html"><i class="fas fa-angle-right"></i> Reduce Image Size</a></li>
+                            <li><a href="compress-image-10kb.html"><i class="fas fa-angle-right"></i> Compress to 10KB</a></li>
+                            <li><a href="logo-maker.html"><i class="fas fa-angle-right"></i> Logo Maker</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Domain Tools Category -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <i class="fas fa-globe"></i>
+                        <h3>Domain Tools</h3>
+                    </div>
+                    <div class="tools-list">
+                        <ul>
+                            <li><a href="domain-age-checker.html"><i class="fas fa-angle-right"></i> Domain Age Checker</a></li>
+                            <li><a href="domain-authority-checker.html"><i class="fas fa-angle-right"></i> Domain Authority Checker</a></li>
+                            <li><a href="domain-ip-lookup.html"><i class="fas fa-angle-right"></i> Domain IP Lookup</a></li>
+                            <li><a href="domain-hosting-checker.html"><i class="fas fa-angle-right"></i> Domain Hosting Checker</a></li>
+                            <li><a href="domain-name-search.html"><i class="fas fa-angle-right"></i> Domain Name Search</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Name Generators Category -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <i class="fas fa-users"></i>
+                        <h3>Name Generators</h3>
+                    </div>
+                    <div class="tools-list">
+                        <ul>
+                            <li><a href="fake-name-generator.html"><i class="fas fa-angle-right"></i> Fake Name Generator</a></li>
+                            <li><a href="fake-address-generator.html"><i class="fas fa-angle-right"></i> Fake Address Generator</a></li>
+                            <li><a href="japanese-name-generator.html"><i class="fas fa-angle-right"></i> Japanese Name Generator</a></li>
+                            <li><a href="last-name-generator.html"><i class="fas fa-angle-right"></i> Last Name Generator</a></li>
+                            <li><a href="random-name-generator.html"><i class="fas fa-angle-right"></i> Random Name Generator</a></li>
+                            <li><a href="korean-name-generator.html"><i class="fas fa-angle-right"></i> Korean Name Generator</a></li>
+                            <li><a href="spanish-name-generator.html"><i class="fas fa-angle-right"></i> Spanish Name Generator</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Binary/Text Tools Category -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Binary/Text Tools</h3>
+                    </div>
+                    <div class="tools-list">
+                        <ul>
+                            <li><a href="text-to-binary.html"><i class="fas fa-angle-right"></i> Text To Binary</a></li>
+                            <li><a href="binary-to-text.html"><i class="fas fa-angle-right"></i> Binary To Text</a></li>
+                            <li><a href="binary-to-hex.html"><i class="fas fa-angle-right"></i> Binary To HEX</a></li>
+                            <li><a href="hex-to-binary.html"><i class="fas fa-angle-right"></i> Hex To Binary</a></li>
+                            <li><a href="binary-to-ascii.html"><i class="fas fa-angle-right"></i> Binary To ASCII</a></li>
+                            <li><a href="ascii-to-binary.html"><i class="fas fa-angle-right"></i> ASCII To Binary</a></li>
+                            <li><a href="binary-to-decimal.html"><i class="fas fa-angle-right"></i> Binary To Decimal</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- AI Writing Tools Category -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <i class="fas fa-robot"></i>
+                        <h3>AI Writing Tools</h3>
+                    </div>
+                    <div class="tools-list">
+                        <ul>
+                            <li><a href="ai-essay-writer.html"><i class="fas fa-angle-right"></i> AI Essay Writer</a></li>
+                            <li><a href="ai-writer.html"><i class="fas fa-angle-right"></i> AI Writer</a></li>
+                            <li><a href="ai-text-generator.html"><i class="fas fa-angle-right"></i> AI Text Generator</a></li>
+                            <li><a href="title-generator.html"><i class="fas fa-angle-right"></i> Title Generator</a></li>
+                            <li><a href="essay-title-generator.html"><i class="fas fa-angle-right"></i> Essay Title Generator</a></li>
+                            <li><a href="ai-story-generator.html"><i class="fas fa-angle-right"></i> AI Story Generator</a></li>
+                            <li><a href="ai-humanizer.html"><i class="fas fa-angle-right"></i> AI Humanizer</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Content Tools Category -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <i class="fas fa-pen-fancy"></i>
+                        <h3>Content Tools</h3>
+                    </div>
+                    <div class="tools-list">
+                        <ul>
+                            <li><a href="plagiarism-checker.html"><i class="fas fa-angle-right"></i> Plagiarism Checker</a></li>
+                            <li><a href="article-rewriter.html"><i class="fas fa-angle-right"></i> Article Rewriter</a></li>
+                            <li><a href="grammar-checker.html"><i class="fas fa-angle-right"></i> Grammar Checker</a></li>
+                            <li><a href="word-counter.html"><i class="fas fa-angle-right"></i> Word Counter</a></li>
+                            <li><a href="spell-checker.html"><i class="fas fa-angle-right"></i> Spell Checker</a></li>
+                            <li><a href="paraphrasing-tool.html"><i class="fas fa-angle-right"></i> Paraphrasing Tool</a></li>
+                            <li><a href="word-combiner.html"><i class="fas fa-angle-right"></i> Word Combiner</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- More Tools Category -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>More Tools</h3>
+                    </div>
+                    <div class="tools-list">
+                        <ul>
+                            <li><a href="resume-builder.html"><i class="fas fa-angle-right"></i> Resume Builder</a></li>
+                            <li><a href="business-card-maker.html"><i class="fas fa-angle-right"></i> Business Card Maker</a></li>
+                            <li><a href="meme-generator.html"><i class="fas fa-angle-right"></i> Meme Generator</a></li>
+                            <li><a href="emojis.html"><i class="fas fa-angle-right"></i> Emojis</a></li>
+                            <li><a href="roman-numerals-date-converter.html"><i class="fas fa-angle-right"></i> Roman Numerals Date</a></li>
+                            <li><a href="mean-median-mode-calculator.html"><i class="fas fa-angle-right"></i> Mean Median Mode</a></li>
+                            <li><a href="time-calculator.html"><i class="fas fa-angle-right"></i> Time Calculator</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Bottom Ad Banner -->
+        <div class="ad-container">
+            <!-- Replace with your Google AdSense ad unit code -->
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-YOUR_PUBLISHER_ID"
+                crossorigin="anonymous"></script>
+            <!-- AllWebTools_Bottom_Banner -->
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-YOUR_PUBLISHER_ID"
+                data-ad-slot="YOUR_AD_SLOT_ID"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+        </div>
+    </div>
+    
+    <!-- Features Section -->
+    <section class="features">
+        <div class="features-container">
+            <div class="section-title">
+                <h2>Why Choose AllWebTools?</h2>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Fast & Easy</h3>
+                    <p>Our tools are designed for speed and simplicity. Get results instantly without any complicated steps.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>100% Secure</h3>
+                    <p>All processing happens in your browser. We don't store your files or data on our servers.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Completely Free</h3>
+                    <p>All our tools are free to use with no hidden charges or premium paywalls.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Friendly</h3>
+                    <p>Works perfectly on all devices - desktop, tablet and mobile phones.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>No Installation</h3>
+                    <p>Use directly in your browser without any downloads or installations.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                    <h3>High Quality</h3>
+                    <p>Get professional quality results without compromising on output.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>AllWebTools</h3>
+                <p>Your one-stop destination for all online tools. Free, fast and easy to use tools for everyone.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tools.html">All Tools</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Popular Tools</h3>
+                <ul>
+                    <li><a href="pdf-to-word.html">PDF to Word</a></li>
+                    <li><a href="compress-image.html">Compress Image</a></li>
+                    <li><a href="plagiarism-checker.html">Plagiarism Checker</a></li>
+                    <li><a href="age-calculator.html">Age Calculator</a></li>
+                    <li><a href="ai-writer.html">AI Writer</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; <span id="year"></span> AllWebTools. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Current year for footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav ul');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+        });
+        
+        // Responsive adjustment
+        function adjustNav() {
+            if (window.innerWidth > 992) {
+                nav.style.display = '';
+            }
+        }
+        
+        window.addEventListener('resize', adjustNav);
+        
+        // Tool search functionality
+        const searchInput = document.querySelector('.search-input');
+        const searchBtn = document.querySelector('.search-btn');
+        
+        searchBtn.addEventListener('click', () => {
+            const searchTerm = searchInput.value.trim().toLowerCase();
+            if (searchTerm) {
+                // In a real implementation, this would search your tools database
+                alert('Searching for: ' + searchTerm);
+                // window.location.href = `search.html?q=${encodeURIComponent(searchTerm)}`;
+            }
+        });
+        
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                searchBtn.click();
+            }
+        });
+    </script>
+    
+    <!-- Schema.org markup for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "AllWebTools",
+        "url": "https://allwebtools.com",
+        "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://allwebtools.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "AllWebTools",
+        "url": "https://allwebtools.com",
+        "logo": "https://allwebtools.com/images/logo.png",
+        "sameAs": [
+            "https://facebook.com/allwebtools",
+            "https://twitter.com/allwebtools",
+            "https://instagram.com/allwebtools"
+        ]
+    }
+    </script>
+</body>
+</html>
