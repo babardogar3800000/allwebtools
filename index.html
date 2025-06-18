@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AllWebTools - 100+ Free Online Tools</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4a6bff;
+            --primary-dark: #3a5bd9;
+            --secondary-color: #00c9a7;
+            --accent-color: #ff6b6b;
+            --dark-color: #2c3e50;
+            --light-color: #f8f9fa;
+            --gray-color: #6c757d;
+            --border-color: #e9ecef;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: var(--dark-color);
+            background-color: #f9fafb;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: white;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        
+        .logo-icon {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-color);
+        }
+        
+        .logo-text span {
+            color: var(--primary-color);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 500;
+            transition: var(--transition);
+            padding: 0.5rem 0;
+            position: relative;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--primary-color);
+            bottom: 0;
+            left: 0;
+            transition: var(--transition);
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark-color);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), #6a11cb);
+            color: white;
+            padding: 5rem 1rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+        
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: -80px;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+        
+        .hero-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .search-input {
+            width: 100%;
+            padding: 1rem 1.5rem;
+            border-radius: 50px;
+            border: none;
+            font-size: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .search-btn {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .search-btn:hover {
+            background-color: #00a58e;
+        }
+        
+        /* Main Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
+        }
+        
+        /* Categories Section */
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--dark-color);
+            display: inline-block;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: var(--primary-color);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .category-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+        }
+        
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .category-header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            transition: var(--transition);
+        }
+        
+        .category-card:hover .category-header {
+            background-color: var(--primary-dark);
+        }
+        
+        .category-icon {
+            font-size: 1.8rem;
+            margin-right: 1rem;
+        }
+        
+        .category-header h3 {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        .tools-list {
+            padding: 1.5rem;
+        }
+        
+        .tools-list ul {
+            list-style: none;
+        }
+        
+        .tools-list li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .tools-list a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--gray-color);
+            padding: 0.5rem 0;
+            transition: var(--transition);
+        }
+        
+        .tools-list a:hover {
+            color: var(--primary-color);
+            transform: translateX(5px);
+        }
+        
+        .tools-list i {
+            margin-right: 0.8rem;
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+        }
+        
+        /* Popular Tools Section */
+        .popular-tools {
+            margin-bottom: 4rem;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 2rem;
+        }
+        
+        .tool-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+        }
+        
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .tool-icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(74, 107, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: var(--primary-color);
+            font-size: 1.8rem;
+            transition: var(--transition);
+        }
+        
+        .tool-card:hover .tool-icon {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .tool-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+        
+        .tool-card p {
+            font-size: 0.9rem;
+            color: var(--gray-color);
+        }
+        
+        /* Features Section */
+        .features {
+            background-color: white;
+            padding: 5rem 1rem;
+            margin: 3rem 0;
+        }
+        
+        .features-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+        
+        .feature-card p {
+            color: var(--gray-color);
+        }
+        
+        /* Call to Action */
+        .cta {
+            background: linear-gradient(135deg, var(--primary-color), #6a11cb);
+            color: white;
+            text-align: center;
+            padding: 4rem 1rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+        }
+        
+        .cta h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .cta-btn {
+            background-color: white;
+            color: var(--primary-color);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            padding: 4rem 1rem 2rem;
+        }
+        
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .footer-column h3::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-column a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-column a:hover {
+            color: white;
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        
+        .social-links a {
+            color: white;
+            background-color: rgba(255, 255, 255, 0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 3rem;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #adb5bd;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            nav ul {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .categories-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero {
+                padding: 4rem 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .tools-grid {
+                grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+                gap: 1.5rem;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo {
+                margin-bottom: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.5rem;
+            }
+            
+            .footer-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .footer-column h3::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .social-links {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <span class="logo-text">All<span>Web</span>Tools</span>
+            </a>
+            
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tools.html">All Tools</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1>100+ Free Online Tools for All Your Needs</h1>
+            <p>AllWebTools provides a comprehensive collection of free online tools to make your work easier. No installation required - use directly in your browser!</p>
+            
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search for tools...">
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Main Container -->
+    <div class="container">
+        <!-- Popular Tools Section -->
+        <section class="popular-tools">
+            <div class="section-title">
+                <h2>Most Popular Tools</h2>
+            </div>
+            
+           <div class="tools-grid">
+            <a href="/tools-compress.html" class="tool-card">
+            <div class="tool-icon">
+            <i class="fas fa-calculator"></i>
+          </div>
+            <div class="tool-name">Age Calculator</div>
+            </a>
+            </div>
+
+                    <h3>Age Calculator</h3>
+                    <p>Calculate age from birth date</p>
+                </a>
+                
+                <a href="pdf-to-word.html" class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-file-word"></i>
+                    </div>
+                    <h3>PDF to Word</h3>
+                    <p>Convert PDF to editable Word</p>
+                </a>
+                
+                <a href="image-compressor.html" class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3>Image Compressor</h3>
+                    <p>Reduce image file size</p>
+                </a>
+                
+                <a href="plagiarism-checker.html" class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Plagiarism Checker</h3>
+                    <p>Check for duplicate content</p>
+                </a>
+                
+                <a href="word-counter.html" class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-font"></i>
+                    </div>
+                    <h3>Word Counter</h3>
+                    <p>Count words and characters</p>
+                </a>
+                
+                <a href="password-generator.html" class="tool-card">
+                    <div class="tool-icon">
+                        <i class="fas fa-key"></i>
+                    </div>
+                    <h3>Password Generator</h3>
+                    <p>Create strong passwords</p>
+                </a>
+            </div>
+        </section>
+        
+        <!-- Categories Section -->
+        <section class="categories">
+            <div class="section-title">
+                <h2>Tools Categories</h2>
+            </div>
+            
+            <div class="categories-grid">
+                <!-- Calculators -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>Calculators</h3>
+                    </div>
+                    <div class="tools-list">
+                        <ul>
+                            <li><a href="age-calculator.html"><i class="fas fa-angle-right"></i> Age Calculator</a></li>
+                            <li><a href="percentage-calculator.html"><i class="fas fa-angle-right"></i> Percentage Calculator</a></li>
+                            <li><a href="gpa-calculator.html"><i class="fas fa-angle-right"></i> GPA Calculator</a></li>
+                            <li><a href="loan-calculator.html"><i class="fas fa-angle-right"></i> Loan Calculator</a></li>
+                            <li><a href="calorie-calculator.html"><i class="fas fa-angle-right"></i> Calorie Calculator</a></li>
+                            <li><a href="salary-calculator.html"><i class="fas fa-angle-right"></i> Salary Calculator</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- PDF Tools -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <h3>PDF Tools</h3>
+                    </div>
+                    <div class="tools-list">
+                        <ul>
+                            <li><a href="pdf-to-word.html"><i class="fas fa-angle-right"></i> PDF to Word</a></li>
+                            <li><a href="word-to-pdf.html"><i class="fas fa-angle-right"></i> Word to PDF</a></li>
+                            <li><a href="compress-pdf.html"><i class="fas fa-angle-right"></i> Compress PDF</a></li>
+                            <li><a href="merge-pdf.html"><i class="fas fa-angle-right"></i> Merge PDF</a></li>
+                            <li><a href="unlock-pdf.html"><i class="fas fa-angle-right"></i> Unlock PDF</a></li>
+                            <li><a href="pdf-to-jpg.html"><i class="fas fa-angle-right"></i> PDF to JPG</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Image Tools -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-image"></i>
+                        </div>
+                        <h3>Image Tools</h3>
+                    </div>
+                    <div class="tools-list">
+                        <ul>
+                            <li><a href="image-compressor.html"><i class="fas fa-angle-right"></i> Image Compressor</a></li>
+                            <li><a href="jpg-to-png.html"><i class="fas fa-angle-right"></i> JPG to PNG</a></li>
+                            <li><a href="png-to-jpg.html"><i class="fas fa-angle-right"></i> PNG to JPG</a></li>
+                            <li><a href="image-resizer.html"><i class="fas fa-angle-right"></i> Image Resizer</a></li>
+                            <li><a href="image-to-text.html"><i class="fas fa-angle-right"></i> Image to Text</a></li>
+                            <li><a href="watermark.html"><i class="fas fa-angle-right"></i> Watermark Tool</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Text Tools -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-font"></i>
+                        </div>
+                        <h3>Text Tools</h3>
+                    </div>
+                    <div class="tools-list">
+                        <ul>
+                            <li><a href="word-counter.html"><i class="fas fa-angle-right"></i> Word Counter</a></li>
+                            <li><a href="plagiarism-checker.html"><i class="fas fa-angle-right"></i> Plagiarism Checker</a></li>
+                            <li><a href="text-to-binary.html"><i class="fas fa-angle-right"></i> Text to Binary</a></li>
+                            <li><a href="password-generator.html"><i class="fas fa-angle-right"></i> Password Generator</a></li>
+                            <li><a href="case-converter.html"><i class="fas fa-angle-right"></i> Case Converter</a></li>
+                            <li><a href="text-to-speech.html"><i class="fas fa-angle-right"></i> Text to Speech</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Name Generators -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>Name Generators</h3>
+                    </div>
+                    <div class="tools-list">
+                        <ul>
+                            <li><a href="fake-name-generator.html"><i class="fas fa-angle-right"></i> Fake Name Generator</a></li>
+                            <li><a href="japanese-name-generator.html"><i class="fas fa-angle-right"></i> Japanese Names</a></li>
+                            <li><a href="korean-name-generator.html"><i class="fas fa-angle-right"></i> Korean Names</a></li>
+                            <li><a href="spanish-name-generator.html"><i class="fas fa-angle-right"></i> Spanish Names</a></li>
+                            <li><a href="username-generator.html"><i class="fas fa-angle-right"></i> Username Generator</a></li>
+                            <li><a href="business-name-generator.html"><i class="fas fa-angle-right"></i> Business Names</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Domain Tools -->
+                <div class="category-card">
+                    <div class="category-header">
+                        <div class="category-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Domain Tools</h3>
+                    </div>
+                    <div class="tools-list">
+                        <ul>
+                            <li><a href="domain-age-checker.html"><i class="fas fa-angle-right"></i> Domain Age Checker</a></li>
+                            <li><a href="whois-lookup.html"><i class="fas fa-angle-right"></i> WHOIS Lookup</a></li>
+                            <li><a href="dns-lookup.html"><i class="fas fa-angle-right"></i> DNS Lookup</a></li>
+                            <li><a href="domain-name-generator.html"><i class="fas fa-angle-right"></i> Domain Name Generator</a></li>
+                            <li><a href="ssl-checker.html"><i class="fas fa-angle-right"></i> SSL Checker</a></li>
+                            <li><a href="ip-lookup.html"><i class="fas fa-angle-right"></i> IP Lookup</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action -->
+        <div class="cta">
+            <h2>Ready to Boost Your Productivity?</h2>
+            <p>Explore our complete collection of 100+ free online tools designed to make your work easier and faster.</p>
+            <button class="cta-btn">Browse All Tools</button>
+        </div>
+    </div>
+    
+    <!-- Features Section -->
+    <section class="features">
+        <div class="features-container">
+            <div class="section-title">
+                <h2>Why Choose AllWebTools?</h2>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Fast & Easy</h3>
+                    <p>Our tools are designed for speed and simplicity. Get results instantly without any complicated steps.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3>100% Secure</h3>
+                    <p>All processing happens in your browser. We don't store your files or data on our servers.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-dollar-sign"></i>
+                    </div>
+                    <h3>Completely Free</h3>
+                    <p>All our tools are free to use with no hidden charges or premium paywalls.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Friendly</h3>
+                    <p>Works perfectly on all devices - desktop, tablet and mobile phones.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>No Installation</h3>
+                    <p>Use directly in your browser without any downloads or installations.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-thumbs-up"></i>
+                    </div>
+                    <h3>High Quality</h3>
+                    <p>Get professional quality results without compromising on output.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>AllWebTools</h3>
+                <p>Your one-stop destination for all online tools. Free, fast and easy to use tools for everyone.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="tools.html">All Tools</a></li>
+                    <li><a href="categories.html">Categories</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Popular Tools</h3>
+                <ul>
+                    <li><a href="pdf-to-word.html">PDF to Word</a></li>
+                    <li><a href="image-compressor.html">Image Compressor</a></li>
+                    <li><a href="plagiarism-checker.html">Plagiarism Checker</a></li>
+                    <li><a href="age-calculator.html">Age Calculator</a></li>
+                    <li><a href="password-generator.html">Password Generator</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="cookie-policy.html">Cookie Policy</a></li>
+                    <li><a href="disclaimer.html">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; <span id="year"></span> AllWebTools. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Current year for footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+        
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.querySelector('nav ul');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+        });
+        
+        // Responsive adjustment
+        function adjustNav() {
+            if (window.innerWidth > 992) {
+                nav.style.display = '';
+            }
+        }
+        
+        window.addEventListener('resize', adjustNav);
+        
+        // Tool search functionality
+        const searchInput = document.querySelector('.search-input');
+        const searchBtn = document.querySelector('.search-btn');
+        
+        searchBtn.addEventListener('click', () => {
+            const searchTerm = searchInput.value.trim();
+            if (searchTerm) {
+                // In a real implementation, this would redirect to search results
+                alert('Searching for: ' + searchTerm);
+                // window.location.href = `search.html?q=${encodeURIComponent(searchTerm)}`;
+            }
+        });
+        
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                searchBtn.click();
+            }
+        });
+    </script>
+</body>
+</html>
